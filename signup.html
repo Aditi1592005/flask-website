@@ -1,0 +1,48 @@
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SIGN-UP PAGE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section-content">
+            <div class=" center-content">    
+            <h1>SIGN-UP PAGE</h1>
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" 
+         alt="Square Image" 
+         style="width: 151px; height: 151px; object-fit: cover; border-radius: 10px;">
+    </div>
+    <p class="centered-paragraph">
+        India's best performing Maharatna Public Sector Undertaking, beginning its journey from being 
+        an Oil and Gas Company in India to a Fortune 500 oil refining, exploration, and marketing conglomerate. 
+        BPCL is excited to announce the upcoming launch of its comprehensive vocational training program, 
+        designed to equip people with the latest technologies and skills needed to excel in their roles. 
+        This program will cover crucial methodologies and is open to all.
+    </p>
+    <div class="centered-paragraph">
+    <p>
+        Kindly Sign-Up:
+    </p>
+</div>
+
+            <form method="POST" action="/signup">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone" placeholder="Enter your phone number" required>
+
+                <button type="submit">Proceed to Registration</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+{% include 'footer.html' %}
