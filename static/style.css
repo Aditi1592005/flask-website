@@ -1,0 +1,185 @@
+/* Main container for flex layout */
+.container {
+    display: flex;                /* Flexbox for side-by-side layout */
+    justify-content: center;      /* Centers content horizontally */
+    align-items: center;          /* Centers content vertically */
+    min-height: 100vh;            /* Full viewport height */
+    background: linear-gradient(to right, #d6eaff, #4b93db); /* Blue gradient background */
+    box-sizing: border-box;       /* Include padding in width calculation */
+    padding: 20px;
+}
+
+/* Style for the paragraph - justified alignment */
+.centered-paragraph {
+    text-align: justify;         /* Justifies text for both left and right alignment */
+    margin: 20px auto;           /* Center the block with automatic horizontal margins */
+    max-width: 95%;              /* Limit paragraph width for better readability */
+    line-height: 1.5;            /* Improve line spacing for better clarity */
+    color: black;                /* Ensure black text color for consistency */
+}
+
+
+/* Left section with form */
+.section-content {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 24px;                 /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);          /* Frosted glass effect */
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Centering heading and image */
+.center-content {
+    text-align: center;          /* Centers text */
+    margin-bottom: 30px;         /* Space below */
+}
+
+/* Student Registration Heading (Black Color) */
+.center-content h1 {
+    font-size: 32px;             /* Large heading size */
+    color: black;                /* Black color */
+    margin-bottom: 20px;         /* Space below heading */
+}
+
+/* Logo image styling */
+.center-content img {
+    display: block;              /* Block for margin auto */
+    margin: 0 auto;              /* Center image horizontally */
+    width: 151px;                /* Fixed width */
+    height: 151px;               /* Fixed height */
+    border-radius: 10px;         /* Rounded corners */
+    object-fit: cover;           /* Ensure image scales properly */
+}
+
+/* Form labels (Black Color) */
+label {
+    display: block;              /* Each label on new line */
+    font-weight: bold;           /* Make labels bold */
+    color: black;                /* Black color */
+    margin-bottom: 2px;          /* Space below labels */
+}
+
+/* Form inputs */
+input {
+    width: 100%;                 /* Full-width inputs */
+    padding: 5px;               /* Comfortable padding */
+    margin-bottom: 20px;         /* Space below inputs */
+    border: 1px solid #ccc;      /* Light border */
+    border-radius: 8px;          /* Rounded corners */
+    box-sizing: border-box;      /* Ensure padding is included */
+}
+
+/* Submit button */
+button {
+    display: block;              /* Ensures proper button alignment */
+    width: 100%;                 /* Full-width button */
+    padding: 12px;               /* Comfortable padding */
+    background-color: #007bff;   /* Primary blue color */
+    color: white;                /* White text */
+    border: none;                /* No border */
+    border-radius: 8px;          /* Rounded corners */
+    font-size: 16px;             /* Readable font size */
+    cursor: pointer;             /* Pointer on hover */
+    transition: background 0.3s; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #0056b3;   /* Darker blue on hover */
+}
+/* Special styling only for the login button */
+.login-btn {
+    background-color: #4CAF50; /* Green color */
+}
+
+/* Hover Effect for Login Button */
+.login-btn:hover {
+    background-color: #45A049; /* Darker green */
+}
+
+
+/* Right section with lock icon */
+.right-section {
+    margin-left: 40px;            /* Space between sections */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 24px;          /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);   /* Frosted glass effect */
+    max-width: 300px;             /* Limit width */
+    text-align: center;           /* Center content */
+}
+
+.right-section h2 {
+    color: black;                 /* Black color for text */
+    font-size: 24px;              /* Medium heading */
+    margin-bottom: 40px;          /* Space below heading */
+}
+
+.lock-icon {
+    font-size: 64px;              /* Large lock icon */
+    color: #007bff;               /* Blue color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;  /* Stack sections vertically */
+    }
+
+    .right-section {
+        margin-left: 0;         /* Remove margin */
+        margin-top: 40px;       /* Space between sections */
+    }
+}
+/* Glassy Container for Header & Footer */
+.header-container, .footer-container {
+    max-width: 90%; /* Limiting the width */
+    margin: 20px auto; /* Centering the box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 20px; /* Rounded corners */
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.3), rgba(240, 248, 255, 0.2)); /* Bluish gradient */
+    backdrop-filter: blur(20px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Soft shadow */
+}
+
+/* Header & Footer Link Styling */
+.header-container nav, .footer-container nav {
+    display: flex;
+    justify-content: center; /* Centering links */
+    gap: 30px; /* Space between links */
+}
+
+.header-container a, .footer-container a {
+    color: white; /* Light text for contrast */
+    text-decoration: none; /* No underline */
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease; /* Smooth hover effect */
+}
+
+.header-container a:hover, .footer-container a:hover {
+    color: #a0c4ff; /* Soft blue hover */
+}
+
+/* Footer Specific Adjustments */
+.footer-container {
+    text-align: center;
+    margin-top: 40px; /* Spacing from content */
+    font-size: 14px;
+}
+/* Header & Footer Link Styling */
+.header-container a, .footer-container a {
+    color: black; /* Dark black text */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    font-size: 16px;
+    transition: 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.header-container a:hover, .footer-container a:hover {
+    color: #555; /* Slightly lighter black on hover */
+}
