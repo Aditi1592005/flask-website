@@ -2,10 +2,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import os
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://flask_registration_db_user:1n5e9Hh3nT3N2k7Y34EProBPDL5txZey@dpg-cv952cl2ng1s73d05kd0-a.oregon-postgres.render.com/flask_registration_db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.secret_key = "your_secret_key"
 db = SQLAlchemy(app)
 
